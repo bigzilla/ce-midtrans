@@ -90,7 +90,7 @@ func (h *Handler) PaymentNotification() http.HandlerFunc {
 		}
 
 		w.Header().Set("Content-Type", "application/json")
-		w.Write([]byte(http.StatusText(http.StatusOK)))
+		fmt.Fprint(w, http.StatusText(http.StatusOK))
 	}
 }
 
